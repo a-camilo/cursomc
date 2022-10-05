@@ -3,7 +3,6 @@ package com.camilo.antonio.mc;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 
-import org.hibernate.cache.spi.support.AbstractReadWriteAccess.Item;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -130,7 +129,7 @@ public class CursomcApplication implements CommandLineRunner {
 		cliente1.getPedidos().addAll(Arrays.asList(ped1,ped2));
 		
 		pedidoRepository.saveAll(Arrays.asList(ped1,ped2));
-		pagamentoRepository.saveAllAndFlush(Arrays.asList(pagto1,pagto2));
+		pagamentoRepository.saveAll(Arrays.asList(pagto1,pagto2));
 		
 		ItemPedido itemPedido1 = new ItemPedido(ped1, p1, 0.00, 1, 2000.00);
 		ItemPedido itemPedido2 = new ItemPedido(ped1, p3, 0.00, 2, 80.00);
