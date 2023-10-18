@@ -18,6 +18,7 @@ import javax.persistence.OneToMany;
 import com.camilo.antonio.mc.domain.enums.TipoCliente;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+
 @Entity
 public class Cliente implements Serializable{
 		
